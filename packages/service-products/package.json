@@ -1,0 +1,27 @@
+{
+  "name": "@polydemo/service-products",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@polydemo/api-types": "0.0.1",
+    "@polydemo/data-products": "0.0.1",
+    "tslib": "^2.3.0"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.lib.json",
+    "test": "vitest run"
+  }
+}

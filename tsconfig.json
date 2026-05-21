@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/api"
+    },
+    {
+      "path": "./packages/service-products"
+    },
+    {
+      "path": "./packages/data-products"
+    },
+    {
+      "path": "./packages/api-products"
+    },
+    {
+      "path": "./packages/api-types"
+    }
+  ]
+}
