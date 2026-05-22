@@ -17,6 +17,15 @@
     },
     {
       "path": "./packages/api-types"
+    },
+    {
+      "path": "./packages/data-cart"
+    },
+    {
+      "path": "./packages/service-cart"
+    },
+    {
+      "path": "./packages/api-cart"
     }
   ]
 }
