@@ -104,15 +104,11 @@ export async function cartRoutes(fastify: FastifyInstance) {
   fastify.patch<{
     Params: { cartId: string; productId: string };
     Body: { quantity: number };
-  }>(
-    '/api/cart/:cartId/items/:productId',
-    updateItemOpts,
-    async (request) => {
-      const { cartId, productId } = request.params;
-      const { quantity } = request.body;
-      return cartService.updateItem(cartId, productId, quantity);
-    }
-  );
+  }>('/api/cart/:cartId/items/:productId', updateItemOpts, async (request) => {
+    const { cartId, productId } = request.params;
+    const { quantity } = request.body;
+    return cartService.updateItem(cartId, productId, quantity);
+  });
 
   const removeItemOpts: RouteShorthandOptions = {
     schema: {

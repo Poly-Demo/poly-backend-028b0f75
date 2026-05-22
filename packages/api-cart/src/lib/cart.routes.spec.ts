@@ -8,7 +8,15 @@ vi.mock('@polydemo/service-cart', () => ({
       if (cartId === 'cart-123') {
         return {
           id: 'cart-123',
-          items: [{ productId: '1', name: 'Test Product', price: 99.99, quantity: 2, image: 'x.jpg' }],
+          items: [
+            {
+              productId: '1',
+              name: 'Test Product',
+              price: 99.99,
+              quantity: 2,
+              image: 'x.jpg',
+            },
+          ],
           total: 199.98,
         };
       }
@@ -16,15 +24,33 @@ vi.mock('@polydemo/service-cart', () => ({
     }),
     addItem: vi.fn().mockReturnValue({
       id: 'cart-123',
-      items: [{ productId: '1', name: 'Test Product', price: 99.99, quantity: 2, image: 'x.jpg' }],
+      items: [
+        {
+          productId: '1',
+          name: 'Test Product',
+          price: 99.99,
+          quantity: 2,
+          image: 'x.jpg',
+        },
+      ],
       total: 199.98,
     }),
     updateItem: vi.fn().mockReturnValue({
       id: 'cart-123',
-      items: [{ productId: '1', name: 'Test Product', price: 99.99, quantity: 2, image: 'x.jpg' }],
+      items: [
+        {
+          productId: '1',
+          name: 'Test Product',
+          price: 99.99,
+          quantity: 2,
+          image: 'x.jpg',
+        },
+      ],
       total: 199.98,
     }),
-    removeItem: vi.fn().mockReturnValue({ id: 'cart-123', items: [], total: 0 }),
+    removeItem: vi
+      .fn()
+      .mockReturnValue({ id: 'cart-123', items: [], total: 0 }),
   },
 }));
 

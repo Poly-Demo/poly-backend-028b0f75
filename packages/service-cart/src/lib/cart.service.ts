@@ -1,6 +1,9 @@
 import { Cart } from '@polydemo/api-types';
 import { CartRepository, cartRepository } from '@polydemo/data-cart';
-import { ProductsRepository, productsRepository } from '@polydemo/data-products';
+import {
+  ProductsRepository,
+  productsRepository,
+} from '@polydemo/data-products';
 
 export class CartService {
   constructor(
@@ -9,7 +12,9 @@ export class CartService {
   ) {}
 
   getCart(cartId: string): Cart {
-    return this.cartRepo.findById(cartId) ?? { id: cartId, items: [], total: 0 };
+    return (
+      this.cartRepo.findById(cartId) ?? { id: cartId, items: [], total: 0 }
+    );
   }
 
   addItem(cartId: string, productId: string, quantity: number): Cart {
