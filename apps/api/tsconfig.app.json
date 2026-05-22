@@ -19,6 +19,9 @@
   "references": [
     {
       "path": "../../packages/api-products/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/api-cart/tsconfig.lib.json"
     }
   ]
 }

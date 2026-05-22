@@ -6,6 +6,7 @@ import cors from '@fastify/cors';
 import swagger from '@fastify/swagger';
 import swaggerUi from '@fastify/swagger-ui';
 import { productsRoutes } from '@polydemo/api-products';
+import { cartRoutes } from '@polydemo/api-cart';
 
 /* eslint-disable-next-line */
 export interface AppOptions {}
@@ -40,6 +41,7 @@ export async function app(fastify: FastifyInstance, opts: AppOptions) {
 
   // Register product routes
   await fastify.register(productsRoutes);
+  await fastify.register(cartRoutes);
 
   // Load other routes
   fastify.register(AutoLoad, {
